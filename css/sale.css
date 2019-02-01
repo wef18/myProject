@@ -1,0 +1,237 @@
+@media screen and (max-width:1200px){
+  #sale{
+    width: 1200px;
+  }
+}
+#sale{
+  background: #b0dafd;
+}
+#sale>div{
+  width: 1200px;
+  margin: 0 auto;
+}
+.sale_nav{
+  /* height: 400px; */
+  /* border: 1px solid #999; */
+  background: url(../img/index/lunbo106.jpg) no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_left{
+  width: 25%;
+  background: #f5f5f5;
+  padding: 10px 20px;
+  /* border: 1px solid #f00; */
+}
+.nav_left>ul{
+  margin-top: 10px;
+}
+.nav_left>ul li{
+  margin-top: 10px;
+  padding: 5px 0;
+}
+.nav_left>ul li~li{
+  border-top: 1px dotted #c6be72;
+}
+.nav_left .title{
+  color: #000;
+  font-size: 15px;
+}
+.nav_left>ul p a{
+  font-size: 14px;
+  display: inline-block;
+  color: #666;
+  padding: 2px;
+}
+.nav_left>ul p a:hover{
+  color: #ff8800;
+  text-decoration: underline;
+}
+.nav_right{
+  width: 50%;
+  /* border: 1px solid #f00; */
+}
+/* .nav_left>ul a{
+  
+} */
+
+
+
+.sale_center{
+  /* text-align: center; */
+  background: #f5f5f5;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.sale_center .cent{
+  text-align: center;
+}
+.sale_center h1{
+  color: #ff8800;
+  font-size: 40px;
+}
+.sale_center h5{
+  color: #774618;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.sale_center>ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.sale_center>ul li{
+  float: left;
+  width: 275px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+.sale_center>ul li img{
+  width: 100%;
+}
+.sale_center .item{
+  padding: 5px 10px;
+}
+.sale_center .item span{
+  color: #666;
+}
+.sale_center .item_title{
+  display: inline-block;
+  font-size: 18px;
+  height: 50px;
+  overflow: hidden;
+  /* border: 1px solid #000 */
+}
+.sale_center .price{
+  color: #ff8800;
+  padding: 5px 0;
+}
+.sale_center .price em{
+  font-size: 22px;
+  padding-left: 8px;
+}
+.sale_center>ul li button{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  background: #ff8800;
+  border-radius: 30px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+
+/* hover事件 */
+.sale_center>ul li:hover,
+.one_item .right_hand li:hover{
+  box-shadow: 0px 1px 1px 1px #ff8800; 
+}
+.one_item>p span:first-child~span:hover{
+  color: #fff;
+  background: #ffc900;
+}
+
+
+.one_title{
+  margin: 10px 0;
+  border-bottom: 2px solid #ff8800;
+  padding-bottom: 5px;
+}
+.one_title span:first-child{
+  color: #ff8800;
+  font-size: 20px;
+  padding-right: 20px;
+}
+.one_title span:last-child{
+  color: #666;
+  font-size: 14px;
+}
+.one_item>p span:first-child{
+  font-size: 15px;
+  color: #355976;
+  padding-right: 10px;
+}
+.one_item>p span:first-child~span{
+  font-size: 14px;
+  color: #666;
+  padding: 5px;
+  cursor: pointer;
+}
+.one_item .item_box{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.one_item .left_hand{
+  width: 35%;
+}
+.one_item .right_hand{
+  width: 64%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.one_item .left_hand li{
+  background: #de6353;
+  margin-bottom: 10px;
+  height: 180px;
+  position: relative;
+}
+.one_item .left_hand a{
+  display: inline-block;
+  width: 300px;
+  
+}
+.one_item .left_hand a img,
+.one_item .right_hand a img{
+  width: 100%;
+}
+.left_hand .left_msg{
+  width: 120px;
+  height: 180px;
+  padding: 8px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.left_hand .left_msg h5{
+  font-size: 18px;
+  color: #333;
+}
+.left_hand .left_msg p{
+  font-size: 14px;
+  color: #355976;
+}
+.left_hand .left_msg span{
+  color: #eee;
+}
+.one_item .right_hand a{
+  display: inline-block;
+  width: 250px;
+}
+.one_item .right_hand li{
+  height: 180px;
+  width: 250px;
+  margin-bottom: 10px;
+  background: #ffc900;
+  text-align: center;
+  overflow: hidden;
+}
+.right_hand .right_price span{
+  font-size: 14px;
+  color: #555;
+}
+#sale .mover{
+  padding: 40px 0;
+  text-align: center;
+}

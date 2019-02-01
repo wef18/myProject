@@ -1,0 +1,165 @@
+@media screen and (max-width:1200px){
+  .bg,#tooltip{
+  width:1200px !important;
+	}
+}
+#header>div{
+  width: 1200px;
+  margin: 20px auto;
+}
+#header>div p{
+  display: inline-block;
+  vertical-align:middle;
+  font-size: 20px;
+}
+#header>div p img{
+  width: 100px;
+  cursor:pointer;
+	vertical-align:middle;
+}
+.bg{
+  height: 750px;
+  width: 100%;
+  background: url(../img/regbg.jpg) center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.log{
+  margin-top: 80px;
+}
+.log>a{
+  color: #ff8800;
+  font-size: 18px;
+  padding-left: 8px;
+}
+.bg:before{
+  content: "";
+  display: table;
+}
+.form{
+  width: 530px;
+  margin-top: 30px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.2); 
+  position: relative; 
+}
+.form form{
+  text-align: left;
+  padding: 20px 0;
+}
+.form form div{
+  margin: 20px 0;
+}
+.form div input{
+  width: 250px;
+  padding: 8px;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+}
+.form div span:first-child{
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+}
+.form div .vali_info{
+  display:none;
+}
+.vali_success,.vali_fail{
+  background-repeat:no-repeat;
+  background-position:left center;
+	display:inline-block;
+}
+.vali_success{
+  background-image:url("../img/ok.png");
+  padding-left:20px;
+  width:0px;
+  height:20px;
+  overflow:hidden;
+}
+.vali_fail{
+	background-image:url("../img/err.png");
+  /* border:1px solid red; */
+	background-color:#ddd;
+	color:red;
+  padding-left:20px;
+  padding-right: 5px;
+}
+.verify{
+  background:url("../img/02.jpg") no-repeat;
+  font-family:"MV Boli";
+  display:inline-block;
+  color:#ff33ff;
+	font-size:18px;
+  padding:2px 20px;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.btn{
+  text-align: center;
+}
+.btn>a{
+  color: #fff;
+  text-decoration: underline;
+  padding-bottom: 2px;
+}
+.btn>input{
+  width: 20px !important;
+  height: 15px;
+  margin-top: 30px;
+}
+.btn>button{
+  /* padding: 10px; */
+  font-size: 25px;
+  padding: 2px 20px;
+  border: none;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+  background: -moz-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+  background: -webkit-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+  background: -o-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+  background: -ms-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+}
+#tooltip{
+  display: none;
+  width: 100%;
+  height: 1200px;
+  background: rgba(0,0,0,0.1);
+  /* border: 2px solid #999; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#tooltip>div{
+  width: 300px;
+  height: 150px;
+  border: 2px solid #999;
+  background: #bbb;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  line-height: 100px;
+  color: red;
+  font-size: 20px;
+}
+#tooltip>div button{
+  width: 60px;
+  font-size: 18px;
+  background: #ff8800;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -25px;
+}

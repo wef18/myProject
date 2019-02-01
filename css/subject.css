@@ -1,0 +1,8 @@
+@media screen and (max-width:1200px){
+  #subject{
+    width: 1200px;
+  }
+}
+#subject{
+  background: #f5f5f5;
+}

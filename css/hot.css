@@ -1,0 +1,8 @@
+@media screen and (max-width:1200px){
+  #hot{
+    width: 1200px;
+  }
+}
+#hot{
+  background: #f5f5f5;
+}

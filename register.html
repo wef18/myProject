@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>XXXX乐园注册页面</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+  <header id="header">
+    <div>
+      <p>
+        <a href="/">
+          <img src="img/logo.jpg" alt="">
+        </a>
+      </p>
+      <p>欢迎注册XXXX乐园</p>
+    </div>
+  </header>
+  <div class="bg">
+    <div class="log">
+      <span>!已有账号点击</span><a href="/login.html">登录</a>
+    </div>
+    <div class="form">
+      <form id="form-register">
+        <div>
+          <span>用户名:</span>
+          <input id="uname" type="text" placeholder="请输入用户名" name="uname"> 
+          <i class="vali_info"></i>
+        </div>
+        <div>
+          <span>密码:</span>
+          <input id="upwd" type="password" placeholder="请输入密码" name="upwd">
+          <i class="vali_info"></i>
+        </div>
+        <div>
+          <span>确认密码:</span>
+          <input id="cpwd" type="password" placeholder="请确认密码" name="cpwd">
+          <i class="vali_info"></i>
+        </div>
+        <div>
+          <span>手机号:</span>
+          <input id="phone" type="phone" placeholder="请输入有效手机号" name="uphone">
+          <i class="vali_info"></i>
+        </div>
+        <div>
+          <span>邮箱:</span>
+          <input id="email" type="email" placeholder="请输入有效邮箱" name="uemail">
+          <i class="vali_info"></i>
+        </div>
+        <div>
+          <span>验证码:</span>
+          <input id="code" type="text" placeholder="请输入验证码" name="code">
+          <i class="verify"></i>
+        </div>
+        <div class="btn">
+          <input type="checkbox" id="chbox"><a href="javascript:;">我同意本站的使用条款</a><br>
+          <button type="button" disabled>注册</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <div id="tooltip">
+    <div>
+      <div id="hint_msg">！！验证码有误请重新输入</div>
+      <button>确定</button>
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/reg.js"></script>
+</body>
+</html>
