@@ -158,7 +158,6 @@ $(function(){
           "Content-Type":"application/x-www-form-urlencoded"
         },
         success: function(result){
-          console.log(result)
           if(result.code === 200){
             $("#tooltip").css("display","block");
             $("#hint_msg").html("注册成功！！")

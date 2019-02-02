@@ -18,7 +18,20 @@ $(function(){
       html += `<img class="lb_left" src="img/left.png" alt="">
       <img class="lb_right" src="img/right.png" alt="">`
       $(".lunbo").html(html)
-
+      $(".lunbo .lb_left").click(function(){
+        index--
+        if(index < 0)
+        index = 3
+        $(".lunbo li").eq(index).fadeIn(500).siblings().fadeOut(500);
+        $(".dot li").eq(index).addClass("b").siblings().removeClass("b");
+      })
+      $(".lunbo .lb_right").click(function(){
+        index++
+        if(index > 3)
+        index = 0
+        $(".lunbo li").eq(index).fadeIn(500).siblings().fadeOut(500);
+        $(".dot li").eq(index).addClass("b").siblings().removeClass("b");
+      })
 
       /* 特价特卖 */
       var html = "";
@@ -432,21 +445,6 @@ $(function(){
     $(".lunbo li").eq(index).fadeIn(2000).siblings().fadeOut(2000);
     $(".dot li").eq(index).addClass("b").siblings().removeClass("b");
   }
-  $(".lunbo .lb_left").click(function(){
-    index--
-    if(index < 0)
-    index = 3
-    $(".lunbo li").eq(index).fadeIn(500).siblings().fadeOut(500);
-    $(".dot li").eq(index).addClass("b").siblings().removeClass("b");
-  })
-
-  $(".lunbo .lb_right").click(function(){
-    index++
-    if(index > 3)
-    index = 0
-    $(".lunbo li").eq(index).fadeIn(500).siblings().fadeOut(500);
-    $(".dot li").eq(index).addClass("b").siblings().removeClass("b");
-  })
   $(".dot li").click(function(){
     var $li = $(this)
     $li.addClass("b").siblings().removeClass("b");

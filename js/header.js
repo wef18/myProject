@@ -8,54 +8,56 @@ window.onscroll=function(){
   }
 }
 $(function(){
+  var url = 'http://tianchengapi.applinzi.com'
   $("<link rel='stylesheet' href='css/header.css'>").appendTo("head");
   $("<link rel='stylesheet' href='css/footer.css'>").appendTo("head");
-  // $('#header').load('header.html');
-   $('#footer').load('footer.html');
-  $.ajax({
-    url: "header.html",
-    type: "get",
-    success: function(res){
-      $(res).replaceAll("#header")
-      var $input = $(".header>div>div>button").click(function(){
-        var $btn = $(this);
-        var kwords=$btn.prev().val();
-        if(kwords.trim()!=="")
-        // console.log(123)
-        location.href = `products.html?kwords=${kwords}`;
-      }).prev().keyup(function(e){
-        if(e.keyCode==13)
-          $(this).next().click()
-      });
-      if(location.search.indexOf("kwords=")!=-1){
-        $input.val(decodeURIComponent(location.search.split("=")[1]));
-      }
-      $("#tail_after>div>button").click(function(){
-        var $btn = $(this);
-        var kwords=$btn.prev().val();
-        if(kwords.trim()!=="")
-        location.href = `products.html?kwords=${kwords}`;
-      }).prev().keyup(function(e){
-        if(e.keyCode==13)
-          $(this).next().click()
-      });
-      if(location.search.indexOf("kwords=")!=-1){
-        $input.val(decodeURIComponent(location.search.split("=")[1]));
-      }
-      // $(".header>.header_two>ul li").click(function(){
-      //   var $li = $(this);
-      //   $li.addClass("checked").siblings().removeClass("checked");
-      // })  
-      $(document).ready(function () {
-        $('.header>.header_two>ul li a').each(function () {
-          if ($($(this))[0].href == String(window.location))
-          $(this).addClass('active_nav').attr('href', 'javascript:void(0);');
+  $('#footer').load('footer.html');
+  $('#header').load('header.html',function(){
+    $.ajax({
+      url: url + "/sessiondata",
+      success: function(result){
+        if(result.uname){
+          $(".header_one>div:last-child").html(`<span>欢迎:&nbsp;</span>${result.uname}&nbsp;&nbsp;<a href="javascript:;" title="退出登录">退出</a>`)
+          $("[title='退出登录']").click(function(){
+            $.ajax({
+              url: url + "/logout",
+              success: function(result){
+                location.href = "login.html";
+              }
+            })
+          })
+        }
+        var $input = $(".header>div>div>button").click(function(){
+          var $btn = $(this);
+          var kwords=$btn.prev().val();
+          if(kwords.trim()!=="")
+          location.href = `products.html?kwords=${kwords}`;
+        }).prev().keyup(function(e){
+          if(e.keyCode==13)
+            $(this).next().click()
         });
-      })
-      if (localStorage.getItem('name')&&localStorage.getItem('pass')){
-        $(".header_one>div:last-child").html("欢迎"+localStorage.name)
-        console.log($(".header_one>div:last-child"))
+        if(location.search.indexOf("kwords=")!=-1){
+          $input.val(decodeURIComponent(location.search.split("=")[1]));
+        }
+        $("#tail_after>div>button").click(function(){
+          var $btn = $(this);
+          var kwords=$btn.prev().val();
+          if(kwords.trim()!=="")
+          location.href = `products.html?kwords=${kwords}`;
+        }).prev().keyup(function(e){
+          if(e.keyCode==13)
+            $(this).next().click()
+        });
+        if(location.search.indexOf("kwords=")!=-1){
+          $input.val(decodeURIComponent(location.search.split("=")[1]));
+        } 
+        $(document).ready(function () {
+          $('.header>.header_two>ul li a').each(function () {
+            if ($($(this))[0].href == String(window.location))
+            $(this).addClass('active_nav').attr('href', 'javascript:void(0);');
+          });
+        })
       }
-    }
-  })
+    })
+  });
 })
