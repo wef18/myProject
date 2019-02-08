@@ -5,7 +5,6 @@ $(function(){
     type:"get",
     dataType:"json",
     success:function(result){
-      // console.log(result);
       /* 轮播图 */
       var html = "";
       for(var p of result.lbItems){
@@ -18,7 +17,7 @@ $(function(){
       html += `<img class="lb_left" src="img/left.png" alt="">
       <img class="lb_right" src="img/right.png" alt="">`
       $(".lunbo").html(html)
-      $(".lunbo .lb_left").click(function(){
+      $(".lb_left").click(function(){
         index--
         if(index < 0)
         index = 3

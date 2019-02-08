@@ -1,7 +1,7 @@
 $(function(){
   var url = 'http://tianchengapi.applinzi.com'
   $("<link rel='stylesheet' href='css/footer.css'>").appendTo("head");
-  $('#footer').load('footer.html');
+	$('#footer').load('footer.html');
   //1.查找触发事件的元素  2.绑定事件处理函数
   $("input:checkbox").click(function(){  
     //查找要修改的元素
@@ -41,7 +41,7 @@ $(function(){
       $("#uname").next().removeClass().addClass("vali_fail")
     }else{
       $.ajax({
-        url:url + "/checkname",
+        url: url + "/checkname",
         data: {uname:$name},
         success:function(result){
           // console.log(result)
@@ -91,6 +91,7 @@ $(function(){
         url: url + "/checkphone",
         data: {uphone:$phone},
         success:function(result){
+          // console.log(result)
           if(result.code == 200){
             $("#phone").next().removeClass().addClass("vali_success")
           }else if(result.code == 201){
@@ -158,6 +159,7 @@ $(function(){
           "Content-Type":"application/x-www-form-urlencoded"
         },
         success: function(result){
+          console.log(result)
           if(result.code === 200){
             $("#tooltip").css("display","block");
             $("#hint_msg").html("注册成功！！")

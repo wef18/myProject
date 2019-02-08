@@ -55,63 +55,63 @@ function rts(num){
 $(function(){
   //当页面加载调用rts方法并传参数
   rts(0)
-  function loadPage(no=0){
-    pno = no
-  }loadPage();
-  $(".condition_nav li").click(function(){
-    //当点击不同排序方法时，调用rts传不同实参到方法中
-    var $li = $(this)
-    $li.addClass("m").siblings().removeClass("m");
-    if($li.index()==0){
-      //没次点击不同排序时，把pno的值变为 0
-      pno = 0
-      rts(0)
-    }else if($li.index()==1){
-      pno = 0
-      rts(1)
-    }else if($li.index()==2){
-      pno = 0
-      rts(2)
-    }
-  })
-  $(".paging>div").on("click","a:not(.disabled):not(.active)",function(e){
-    e.preventDefault();
-    var $li = $(".condition_nav li") 
-    var $a=$(this);
-    var a = $a.html()
-    if($(".condition_nav li:nth-child(1)").is(".m")){
-      if($a.is(":first-child")){
-        loadPage(pno-1);
+    function loadPage(no=0){
+      pno = no
+    }loadPage();
+    $(".condition_nav li").click(function(){
+      //当点击不同排序方法时，调用rts传不同实参到方法中
+      var $li = $(this)
+      $li.addClass("m").siblings().removeClass("m");
+      if($li.index()==0){
+        //没次点击不同排序时，把pno的值变为 0
+        pno = 0
         rts(0)
-      }else if($a.html()==="下一页"){
-        loadPage(pno+1);
-        rts(0)          
-      }else if(a){
-        loadPage(pno=a-1);
-        rts(0)          
-      }    
-    }else if($(".condition_nav li:nth-child(2)").is(".m")){
-      if($a.is(":first-child")){
-        loadPage(pno-1);
+      }else if($li.index()==1){
+        pno = 0
         rts(1)
-      }else if($a.html()==="下一页"){
-        loadPage(pno+1);
-        rts(1)          
-      }else if(a){
-        loadPage(pno=a-1);
-        rts(1)
-      } 
-    }else if($(".condition_nav li:nth-child(3)").is(".m")){
-      if($a.is(":first-child")){
-        loadPage(pno-1);
+      }else if($li.index()==2){
+        pno = 0
         rts(2)
-      }else if($a.html()==="下一页"){
-        loadPage(pno+1);
-        rts(2)          
-      }else if(a){
-        loadPage(pno=a-1);
-        rts(2)          
-      } 
-    }
-  })
+      }
+    })
+    $(".paging>div").on("click","a:not(.disabled):not(.active)",function(e){
+      e.preventDefault();
+      var $li = $(".condition_nav li") 
+      var $a=$(this);
+      var a = $a.html()
+      if($(".condition_nav li:nth-child(1)").is(".m")){
+        if($a.is(":first-child")){
+          loadPage(pno-1);
+          rts(0)
+        }else if($a.html()==="下一页"){
+          loadPage(pno+1);
+          rts(0)          
+        }else if(a){
+          loadPage(pno=a-1);
+          rts(0)          
+        }    
+      }else if($(".condition_nav li:nth-child(2)").is(".m")){
+        if($a.is(":first-child")){
+          loadPage(pno-1);
+          rts(1)
+        }else if($a.html()==="下一页"){
+          loadPage(pno+1);
+          rts(1)          
+        }else if(a){
+          loadPage(pno=a-1);
+          rts(1)
+        } 
+      }else if($(".condition_nav li:nth-child(3)").is(".m")){
+        if($a.is(":first-child")){
+          loadPage(pno-1);
+          rts(2)
+        }else if($a.html()==="下一页"){
+          loadPage(pno+1);
+          rts(2)          
+        }else if(a){
+          loadPage(pno=a-1);
+          rts(2)          
+        } 
+      }
+    })
 })

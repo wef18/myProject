@@ -192,14 +192,9 @@
 }
 .products .paging a:first-child~a{
   border-left: 1px solid #aaa;
-  /* padding: 8px; */
 }
 .products .paging a{
   padding: 8px;
-}
-.products .paging a:hover{
-  color: #e0e0e0;
-  background: #fca500;
 }
 .products .paging span{
   font-size: 12px;

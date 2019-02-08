@@ -1,5 +1,5 @@
-$(function(){  
-  var url = 'http://tianchengapi.applinzi.com'
+$(function(){ 
+  var url = 'http://tianchengapi.applinzi.com' 
   $.ajax({
     url: url + '/sale',
     success: function(result) {

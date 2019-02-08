@@ -111,8 +111,7 @@ $(function(){
   $(".block_one_nav>li").click(function(){
     var $li = $(this);
     $li.addClass("checked_a").siblings().removeClass("checked_a");
-    $(".item_cont").eq($(this).index()).show();
-    $(".item_cont").eq($(this).index()).siblings().hide();
+    $(".item_cont").eq($(this).index()).show().siblings().hide();
   })
 
   var index = 0
